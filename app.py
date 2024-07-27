@@ -13,8 +13,9 @@ with gr.Blocks() as demo:
             model = gr.Dropdown(label="Model", value="gpt-3.5-turbo", choices=["gpt-3.5-turbo", "gpt-4-turbo", "gpt-4o"])
             context = gr.Dropdown(label="Store type", value=store_types[0], choices=store_types)
             label = gr.Label("Set your Order Bot")
-            email = gr.Textbox(label="Email", placeholder="Input your Email")
-            send = gr.Button("Send Confirmation Email")
+            gr.Markdown("If you want to send confirmation email you must run it locally [GitHub repo](https://github.com/jorge-armando-navarro-flores/GPT_order_bot)")
+            email = gr.Textbox(label="Email", placeholder="Input your Email", interactive=False)
+            send = gr.Button("Send Confirmation Email", interactive=False)
             
         with gr.Column(scale=3):
             chatbot = gr.Chatbot(pizza_shop_context, type="messages")

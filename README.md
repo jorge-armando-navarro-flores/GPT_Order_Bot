@@ -61,7 +61,7 @@ This is a simple chatbot that allows users to place orders through a chat interf
 
    ```env
    SMTP_SERVER=your_smtp_server
-   SMTP_PORT=4your_smtp_port
+   SMTP_PORT=your_smtp_port
    EMAIL_ADDRESS=your_email@example.com
    EMAIL_PASSWORD=your_email_password
    ```
