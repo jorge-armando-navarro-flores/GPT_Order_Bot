@@ -64,6 +64,7 @@ This is a simple chatbot that allows users to place orders through a chat interf
    SMTP_PORT=your_smtp_port
    EMAIL_ADDRESS=your_email@example.com
    EMAIL_PASSWORD=your_email_password
+   INTERACTIVE=1
    ```
 
 5. **Run the Chatbot**
@@ -73,6 +74,9 @@ This is a simple chatbot that allows users to place orders through a chat interf
    ```
 
 ## Usage
+
+![app start](screenshots/gobstart.png)
+[See the working demo here](https://huggingface.co/spaces/JanfNavf/GPT_order_bot)
 
 1. **Start the Chatbot**
 
