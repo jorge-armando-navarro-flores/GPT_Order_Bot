@@ -14,7 +14,8 @@ with gr.Blocks() as demo:
     appTitle = gr.Label("GPT Order Bot", color="#6EACDA")
     with gr.Row():
         with gr.Column(scale=1):   
-            apikey = gr.Textbox(label="Open AI API key", placeholder="Input your OpenAI API key", type="password")
+            apikey = gr.Textbox(label="OpenAI API key", placeholder="Input your OpenAI API key", type="password")
+            gr.Markdown("Get your OpenAI API key [here](https://platform.openai.com/api-keys) you will need to create an OpeanAI account if you don't have")
             model = gr.Dropdown(label="Model", value="gpt-3.5-turbo", choices=["gpt-3.5-turbo", "gpt-4-turbo", "gpt-4o"])
             context = gr.Dropdown(label="Store type", value=store_types[0], choices=store_types)
             label = gr.Label("Set your Order Bot")
@@ -25,7 +26,7 @@ with gr.Blocks() as demo:
             
         with gr.Column(scale=3):
             chatbot = gr.Chatbot(pizza_shop_context, type="messages")
-            msg = gr.Textbox()
+            msg = gr.Textbox(label="Press Enter to submit your meassage")
             clear = gr.ClearButton([msg, chatbot])
 
             def respond(message, chat_history):

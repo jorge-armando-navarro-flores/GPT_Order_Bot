@@ -43,7 +43,6 @@ def send_email(content, receiver_email, apikey):
     # Send the email using the 'with' statement
     try:
         if not receiver_email: raise ValueError
-        print(smtp_server, smtp_port, sender_email)
         with smtplib.SMTP_SSL(smtp_server, smtp_port) as server:
             server.login(sender_email, password)
             server.send_message(message)
